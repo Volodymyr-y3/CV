@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Volodymyr Yakubovych — Strategic Technology, Product & Operations Leader</title>
 <meta name="description" content="Strategic technology, product and operations leader with 18+ years across FinTech, payments, Web3, AI, cybersecurity and telecommunications.">
-<meta name="author" content="V">
+<meta name="author" content="Volodymyr Yakubovych">
 <meta name="theme-color" content="#07080b">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
@@ -24,30 +24,65 @@ main{max-width:1180px;margin:auto;padding:58px 30px 90px}.hero{display:grid;grid
 .role{display:grid;grid-template-columns:210px 1fr;gap:40px;padding:29px 0;border-top:1px solid rgba(255,255,255,.06);cursor:pointer;transition:transform .25s,background .25s}.role:hover{transform:translateX(4px);background:rgba(255,255,255,.018)}.date{font:12px "JetBrains Mono";color:var(--dim)}.company{font-size:21px;font-weight:600;letter-spacing:-.025em}.title{color:var(--muted);margin-top:2px}.location{color:var(--dim);font-size:12px;margin-top:10px}.role p{color:var(--muted);max-width:800px;margin:12px 0}.role ul{margin:13px 0 0;padding-left:19px;color:var(--muted)}.role li{margin:7px 0}.metric{color:var(--text);font-weight:600}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:var(--dim);font:10px "JetBrains Mono"}
 .expertise{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.expertise article{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px}.expertise h3{margin:0 0 9px;font-size:13px}.expertise p{margin:0;color:var(--muted);font-size:14px}
 .contact{text-align:center;padding:100px 0 20px}.contact h2{font:italic 54px "Instrument Serif",Georgia,serif;font-weight:400;margin:15px 0}.contact p{color:var(--muted)}.contact a{display:inline-block;margin:12px 5px;padding:10px 16px;border:1px solid var(--line);border-radius:999px}.contact a.primary{background:var(--accent);color:#111;border-color:var(--accent)}
-#timeline{display:none;overflow:hidden}.timeline-wrap{height:calc(100vh - 58px);min-height:650px;position:relative;overflow:hidden}.track{height:100%;display:flex;flex-direction:row;align-items:center;gap:30px;width:max-content;padding:0 9vw;direction:ltr}.chapter{width:min(820px,76vw);flex:0 0 auto;display:grid;grid-template-columns:230px 1fr;gap:35px;padding:35px;border:1px solid var(--line);background:rgba(12,14,19,.78);border-radius:18px}.chapter h2{font-size:30px;line-height:1.05;margin:8px 0}.chapter .year{font:46px "JetBrains Mono";color:var(--accent);opacity:.65}.chapter p,.chapter li{color:var(--muted)}.chapter ul{padding-left:18px}.timeline-hint{position:absolute;top:78px;left:8vw;z-index:2;color:var(--dim)}.timeline-hint{position:absolute;top:78px;left:8vw;z-index:2;color:var(--dim)}.rail{position:absolute;bottom:28px;left:8vw;right:8vw}.rail-line{height:1px;background:var(--line);position:relative}.rail-fill{position:absolute;height:2px;background:var(--accent);top:-1px;left:0;width:0}.nodes{display:flex;justify-content:space-between;margin-top:-5px}.node{width:10px;height:10px;border-radius:50%;background:var(--dim);border:2px solid var(--bg);cursor:pointer}.node.active{background:var(--accent);box-shadow:0 0 15px var(--accent)}.rail-meta{display:flex;justify-content:space-between;margin-top:14px;color:var(--dim);font:11px "JetBrains Mono"}
+#timeline{display:none;overflow:hidden}.timeline-wrap{height:calc(100vh - 58px);padding-top:30px;min-height:650px;position:relative;overflow:hidden}.track{height:100%;display:flex;flex-direction:row;align-items:center;gap:30px;width:max-content;padding:0 9vw;direction:ltr}.chapter{width:min(820px,76vw);flex:0 0 auto;display:grid;grid-template-columns:230px 1fr;gap:35px;padding:35px;border:1px solid var(--line);background:rgba(12,14,19,.78);border-radius:18px}.chapter h2{font-size:30px;line-height:1.05;margin:8px 0}.chapter .year{font:46px "JetBrains Mono";color:var(--accent);opacity:.65}.chapter p,.chapter li{color:var(--muted)}.chapter ul{padding-left:18px}.timeline-hint{position:absolute;top:78px;left:8vw;z-index:2;color:var(--dim)}
+.rail{position:absolute;top:18px;left:0;right:0;height:82px;padding:0 8vw;z-index:5;background:linear-gradient(180deg,rgba(7,8,11,.98) 0%,rgba(7,8,11,.92) 72%,rgba(7,8,11,0) 100%)}
+.rail-top{height:42px;display:grid;grid-template-columns:190px 1fr 92px;align-items:center;gap:24px}
+.rail-current{display:flex;align-items:baseline;gap:10px;white-space:nowrap}.rail-current #railDate{font:500 34px "JetBrains Mono";letter-spacing:-.05em;color:var(--text)}.rail-month{font:10px "JetBrains Mono";color:var(--dim);letter-spacing:.16em}
+.rail-track{position:relative;height:30px;display:flex;align-items:center}.rail-line{height:1px;background:rgba(255,255,255,.24);position:absolute;left:0;right:0;top:14px}.rail-fill{position:absolute;height:2px;background:var(--accent);top:-1px;left:0;width:0;box-shadow:0 0 8px rgba(226,198,156,.5)}
+.nodes{position:absolute;left:0;right:0;top:10px;height:10px;display:flex;justify-content:space-between;align-items:center}.node{width:8px;height:8px;border-radius:50%;padding:0;background:#777;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}.node:hover{transform:scale(1.35)}.node.active{width:14px;height:14px;background:var(--accent);box-shadow:0 0 0 7px rgba(226,198,156,.12),0 0 22px rgba(226,198,156,.8);transform:translateY(-3px)}
+.rail-counter{font:11px "JetBrains Mono";color:var(--dim);text-align:right;white-space:nowrap}
+.rail-years{position:absolute;left:calc(8vw + 214px);right:calc(8vw + 116px);top:56px;height:20px;display:flex;justify-content:space-between;pointer-events:none}.rail-year{font:10px "JetBrains Mono";color:var(--dim);letter-spacing:.08em;transform:translateX(-50%)}.rail-year.active{color:var(--text)}
+.rail-meta{display:flex;justify-content:space-between;margin-top:3px;color:var(--dim);font:9px "JetBrains Mono";letter-spacing:.08em}
 footer{text-align:center;color:var(--dim);font-size:11px;padding:35px 0}
 
 @media(max-width:860px){
- main{padding:35px 20px 70px}.hero{grid-template-columns:1fr;gap:25px;padding-top:30px}.hero h1{font-size:clamp(42px,13vw,65px)}.stats{grid-template-columns:repeat(2,1fr)}.role{grid-template-columns:1fr;gap:8px}.expertise{grid-template-columns:1fr}.timeline-wrap{height:auto;min-height:0}.track{display:block;width:auto;padding:20px}.chapter{width:100%;display:block;margin:0 0 18px}.chapter .year{font-size:32px}.rail{display:none}
+ main{padding:35px 20px 70px}.hero{grid-template-columns:1fr;gap:25px;padding-top:30px}.hero h1{font-size:clamp(42px,13vw,65px)}.stats{grid-template-columns:repeat(2,1fr)}.role{grid-template-columns:1fr;gap:8px}.expertise{grid-template-columns:1fr}.timeline-wrap{height:auto;min-height:0}.track{display:block;width:auto;padding:20px}.chapter{width:100%;display:block;margin:0 0 18px}.chapter .year{font-size:32px}.rail{top:10px;height:74px;padding:0 20px}.rail-top{grid-template-columns:92px 1fr 55px;gap:10px}.rail-current #railDate{font-size:23px}.rail-years{left:112px;right:75px}.rail-meta{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Portfolio-style presentation */
+.topbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 34px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(7,8,11,.82);backdrop-filter:blur(18px)}
+.brand{display:flex;align-items:center;gap:14px;white-space:nowrap}.brand-mark{color:var(--accent);font-weight:800;font-size:18px;letter-spacing:-.08em}.brand strong{font-size:16px}
+.nav-links{display:flex;align-items:center;gap:4px}.nav-links button{border:0;background:none;color:var(--text);opacity:.82;font:500 13px Inter;cursor:pointer;padding:10px 12px}.nav-links button:hover{color:var(--accent)}
+.top-actions{display:flex;align-items:center;gap:14px}.download{border:1px solid rgba(226,198,156,.45);border-radius:7px;padding:9px 13px;font-size:12px}.theme-dot{border:0;background:none;color:var(--accent);font-size:20px}
+.hero{position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-5%;top:-10%;width:52%;height:120%;background:radial-gradient(circle at center,rgba(226,198,156,.10),transparent 55%);pointer-events:none}.hero-side{position:relative;z-index:1}.portrait-wrap{box-shadow:0 30px 80px rgba(0,0,0,.35);border:1px solid rgba(226,198,156,.15)}
+.hero-contact{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;font-size:12px;color:var(--muted)}.hero-contact a:hover{color:var(--accent)}
+.intro-grid{display:grid;grid-template-columns:1.65fr 1fr;gap:18px;margin:0 0 68px}.capabilities-card,.about-card{border:1px solid var(--line);border-radius:10px;background:linear-gradient(145deg,rgba(17,22,30,.92),rgba(9,12,17,.96));padding:22px}.section-label{font-weight:700;font-size:15px;margin-bottom:16px}.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.cap-grid span{background:rgba(31,42,56,.7);border:1px solid rgba(255,255,255,.04);border-radius:7px;padding:9px 10px;font-size:11px;color:#d7d6d1}.about-card p{font-size:13px;color:var(--muted)}.accent-copy{color:var(--accent)!important;font-weight:600}.outline-btn{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:5px;padding:8px 13px;font-size:11px;margin-top:8px}
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}.highlight-grid article{background:var(--bg);padding:24px}.highlight-grid b{display:block;font-size:29px;letter-spacing:-.05em}.highlight-grid span{font:10px "JetBrains Mono";color:var(--accent)}.highlight-grid p{font-size:12px;color:var(--muted)}
+.stats{grid-template-columns:repeat(6,1fr)}
+@media(max-width:1100px){.nav-links{display:none}.cap-grid{grid-template-columns:repeat(2,1fr)}.intro-grid{grid-template-columns:1fr}.highlight-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.topbar{padding:0 18px}.brand strong{font-size:14px}.top-actions{display:none}.hero-contact{gap:10px}.highlight-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
 <header class="topbar">
-  <div class="tabs" role="tablist" aria-label="CV views">
-    <button class="tab" role="tab" aria-selected="true" aria-controls="overview" id="tab-overview">Overview</button>
-    <button class="tab" role="tab" aria-selected="false" aria-controls="timeline" id="tab-timeline">Timeline</button>
-  </div>
+  <div class="brand"><span class="brand-mark">VY</span><strong>Volodymyr Yakubovych</strong></div>
+  <nav class="nav-links" aria-label="Primary navigation">
+    <button data-scroll="hero-anchor">About</button>
+    <button data-scroll="experience">Experience</button>
+    <button id="tab-timeline-nav">Timeline</button>
+    <button data-scroll="skills">Skills</button>
+    <button data-scroll="highlights">Highlights</button>
+    <button data-scroll="education">Education</button>
+    <button data-scroll="contact">Contact</button>
+  </nav>
+  <div class="top-actions"><a class="download" href="#" onclick="window.print();return false;">↓ Download CV</a><button class="theme-dot" aria-label="Theme">☼</button></div>
 </header>
 
 <section id="overview" role="tabpanel" aria-labelledby="tab-overview">
 <main>
-<section class="hero">
+<section class="hero" id="hero-anchor">
   <div>
     <div class="mono">Volodymyr Yakubovych · Strategic Technology, Product & Operations</div>
     <h1>Take ownership of <em>difficult, expensive problems.</em></h1>
     <p>18+ years building, scaling and transforming technology businesses across FinTech, payments, Web3, AI, cybersecurity and telecommunications. I turn ambiguous strategic goals into predictable execution, scalable operating models and measurable outcomes.</p>
+    <div class="hero-contact">
+      <a href="mailto:volodymyr.y3@gmail.com">✉ volodymyr.y3@gmail.com</a>
+      <a href="https://www.linkedin.com/in/vy77/" target="_blank">in / vy77</a>
+      <a href="https://github.com/Volodymyr-y3/CV" target="_blank">GitHub / Volodymyr-y3</a>
+      <span>Portugal · Remote Europe / US / Canada</span>
+    </div>
   </div>
   <div class="hero-side">
     <div class="portrait-wrap">
@@ -64,10 +99,33 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:35px 0}
   <div class="stat"><b>40+</b><span>LAUNCHES & PROGRAMS</span></div>
   <div class="stat"><b>€100K→€20K</b><span>AI OPS COST</span></div>
   <div class="stat"><b>&gt;50%</b><span>FEATURE LEAD TIME ↓</span></div>
+</section><section class="intro-grid">
+  <div class="capabilities-card" id="skills">
+    <div class="section-label">◉ &nbsp; Core Capabilities</div>
+    <div class="cap-grid">
+      <span>Engineering Leadership</span><span>Team Building & Scaling</span>
+      <span>Product Roadmapping</span><span>Delivery Excellence</span>
+      <span>Navigating Ambiguity</span><span>Continuous Improvement</span>
+      <span>Cloud Architecture (AWS)</span><span>CI/CD & DevOps</span>
+      <span>Observability & Reliability</span><span>FinTech & Regulated Domains</span>
+      <span>Stakeholder Management</span><span>OKR Setup & Execution</span>
+      <span>MVP Launch</span><span>Business Analytics</span>
+      <span>Kanban / Agile / Scrum</span><span>GitHub</span>
+      <span>Claude Code</span><span>Gemini</span><span>Rebranding</span><span>AI Agents</span>
+    </div>
+  </div>
+  <aside class="about-card">
+    <div class="section-label">◉ &nbsp; About Me</div>
+    <p>I am a Strategic Technology, Product & Operations leader with 18+ years of experience driving engineering excellence and business outcomes in fintech, crypto and digital platforms.</p>
+    <p class="accent-copy">I navigate ambiguity and turn it into structure, priorities and execution.</p>
+    <p>I align technology with business goals, build high-performing teams and deliver systems that scale.</p>
+    <a href="#experience" class="outline-btn">View Experience →</a>
+  </aside>
 </section>
 
-<section class="section">
-<div class="section-head"><span class="num">01</span><h2>Experience</h2><span class="count">08 roles</span></div>
+
+<section class="section" id="experience">
+<div class="section-head"><span class="num">01</span><h2>Experience</h2><span class="count">YEAR-BASED · LATEST FIRST</span></div>
 
 <article class="role">
 <div><div class="date">JUN 2026 — SEP 2026</div><div class="location">Remote · Confidential / NDA</div></div>
@@ -166,7 +224,7 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:35px 0}
 </article>
 </section>
 
-<section class="section">
+<section class="section" id="education">
 <div class="section-head"><span class="num">02</span><h2>What I Bring</h2></div>
 <div class="expertise">
 <article><h3>Business & Transformation</h3><p>Strategic execution · Operating models · Organizational design · Business transformation · M&A integration · Executive operations</p></article>
@@ -188,9 +246,18 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:35px 0}
 </div>
 </section>
 
-<section class="contact">
+<section class="section" id="highlights">
+  <div class="section-head"><span class="num">04</span><h2>Highlights</h2></div>
+  <div class="highlight-grid">
+    <article><b>20 → 60+</b><span>FTE</span><p>Scaled a Web3 organization from one team to four cross-functional teams.</p></article>
+    <article><b>€100K → €20K</b><span>AI OPS COST</span><p>Automated analytics and data sourcing operations in a three-month contract engagement.</p></article>
+    <article><b>&gt;50%</b><span>LEAD TIME</span><p>Shortened feature lead time through product, planning and delivery improvements.</p></article>
+    <article><b>30%</b><span>CLOUD COST ↓</span><p>Optimized infrastructure architecture without compromising scalability.</p></article>
+  </div>
+</section>
+<section class="contact" id="contact">
 <div class="mono">CONTACT</div><h2>Let’s talk about the problem.</h2>
-<p>Based in Portugal · Working remotely across Europe, the US & Canada, the US & Canada, the US & Canada, the US & Canada, the US & Canada</p>
+<p>Based in Portugal · Working remotely across Europe, the US & Canada</p>
 <a class="primary" href="mailto:volodymyr.y3@gmail.com">Email</a>
 <a href="https://www.linkedin.com/in/vy77/" target="_blank" rel="noopener">LinkedIn</a>
 </section>
@@ -201,7 +268,18 @@ footer{text-align:center;color:var(--dim);font-size:11px;padding:35px 0}
 <section id="timeline" role="tabpanel" aria-labelledby="tab-timeline">
 <div class="timeline-wrap" id="timelineWrap">
 <div class="track" id="track"></div>
-<div class="rail"><div class="rail-line"><div class="rail-fill" id="railFill"></div></div><div class="nodes" id="nodes"></div><div class="rail-meta"><span id="railDate">2008</span><span id="counter">01 / 08</span></div></div>
+<div class="rail">
+  <div class="rail-top">
+    <div class="rail-current"><span class="rail-month">NOW</span><span id="railDate">2026</span></div>
+    <div class="rail-track">
+      <div class="rail-line"><div class="rail-fill" id="railFill"></div></div>
+      <div class="nodes" id="nodes"></div>
+    </div>
+    <div class="rail-counter" id="counter">01 / 15</div>
+  </div>
+  <div class="rail-years" id="railYears"></div>
+  <div class="rail-meta"><span>2008</span><span>← DRAG / SCROLL →</span><span>2026</span></div>
+</div>
 </div>
 </section>
 
@@ -230,19 +308,22 @@ const data=[
 let built=false;
 function buildTimeline(){
 if(built)return; built=true;
-const track=document.getElementById('track'),nodes=document.getElementById('nodes');
+const track=document.getElementById('track'),nodes=document.getElementById('nodes'),years=document.getElementById('railYears');
 data.forEach((d,i)=>{
  const c=document.createElement('article');c.className='chapter';c.id='chapter-'+i;
  c.innerHTML=`<div><div class="timeline-year">${d[0]}</div><h2>${d[1]}</h2><div class="mono">${d[2]}</div></div><div><p>${d[3]}</p></div>`;
  track.appendChild(c);
- const n=document.createElement('button');n.className='node';n.setAttribute('aria-label',`Go to ${d[1]}`);n.onclick=()=>c.scrollIntoView({behavior:'smooth',inline:'center'});nodes.appendChild(n);
+ const n=document.createElement('button');n.className='node';n.setAttribute('aria-label',`Go to ${d[0]} — ${d[1]}`);n.onclick=()=>c.scrollIntoView({behavior:'smooth',inline:'center'});nodes.appendChild(n);
+ const y=document.createElement('span');y.className='rail-year';y.textContent=d[0];years.appendChild(y);
 });
 const wrap=document.getElementById('timelineWrap');
 wrap.addEventListener('wheel',e=>{if(window.innerWidth>860){e.preventDefault();wrap.scrollLeft+=e.deltaY+e.deltaX}},{passive:false});
 function update(){
  const cards=[...track.children], center=window.innerWidth/2;
- let best=0,dist=Infinity;cards.forEach((c,i)=>{const r=c.getBoundingClientRect(),d=Math.abs((r.left+r.width/2)-center);if(d<dist){dist=d;best=i}});
+ let best=0,dist=Infinity;
+ cards.forEach((c,i)=>{const r=c.getBoundingClientRect(),d=Math.abs((r.left+r.width/2)-center);if(d<dist){dist=d;best=i}});
  document.querySelectorAll('.node').forEach((n,i)=>n.classList.toggle('active',i===best));
+ document.querySelectorAll('.rail-year').forEach((y,i)=>y.classList.toggle('active',i===best));
  document.getElementById('counter').textContent=`${String(best+1).padStart(2,'0')} / ${String(cards.length).padStart(2,'0')}`;
  document.getElementById('railDate').textContent=data[best][0];
  document.getElementById('railFill').style.width=(best/(cards.length-1)*100)+'%';
@@ -256,6 +337,12 @@ timelineTrack.addEventListener('wheel',e=>{
     timelineTrack.scrollLeft += e.deltaY;
   }
 },{passive:false});
+
+
+document.querySelectorAll('[data-scroll]').forEach(btn=>btn.addEventListener('click',()=>{
+  const el=document.getElementById(btn.dataset.scroll); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+document.getElementById('tab-timeline-nav')?.addEventListener('click',()=>document.getElementById('tab-timeline')?.click());
 </script>
 </body>
 </html>
