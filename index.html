@@ -53,15 +53,15 @@ position:absolute;bottom:18px;top:auto;left:0;right:0;height:88px;padding:0 3vw;
 background:linear-gradient(0deg,rgba(7,8,11,.99) 0%,rgba(7,8,11,.94) 72%,rgba(7,8,11,0) 100%);
 pointer-events:none
 }
-.rail-top{height:48px;display:grid;grid-template-columns:150px 1fr 70px;align-items:center;gap:18px}
-.rail-current{display:flex;align-items:baseline;gap:8px;white-space:nowrap}.rail-current #railDate{font:500 32px "JetBrains Mono";letter-spacing:-.06em;color:var(--text)}
+.rail-top{height:48px;position:relative;display:block}
+.rail-current{position:absolute;left:0;top:0;z-index:3;display:flex;align-items:baseline;gap:8px;white-space:nowrap}.rail-current #railDate{font:500 32px "JetBrains Mono";letter-spacing:-.06em;color:var(--text)}
 .rail-month{font:10px "JetBrains Mono";color:var(--dim);letter-spacing:.16em}
-.rail-track{position:relative;height:30px;display:flex;align-items:center}.rail-line{height:1px;background:rgba(255,255,255,.28);position:absolute;left:0;right:0;top:14px}.rail-fill{position:absolute;height:2px;background:var(--accent);top:-1px;left:0;width:0;box-shadow:0 0 10px rgba(226,198,156,.55)}
+.rail-track{position:absolute;left:0;right:0;top:0;height:30px;display:flex;align-items:center}.rail-line{height:1px;background:rgba(255,255,255,.28);position:absolute;left:0;right:0;top:14px}.rail-fill{position:absolute;height:2px;background:var(--accent);top:-1px;left:0;width:0;box-shadow:0 0 10px rgba(226,198,156,.55)}
 .nodes{position:absolute;left:0;right:0;top:10px;height:10px;display:flex;justify-content:space-between;align-items:center}
 .node{width:7px;height:7px;border-radius:50%;padding:0;background:#777;border:0;cursor:pointer;pointer-events:auto;transition:transform .2s,background .2s,box-shadow .2s}
 .node:hover{transform:scale(1.35)}.node.active{width:13px;height:13px;background:var(--accent);box-shadow:0 0 0 7px rgba(226,198,156,.12),0 0 22px rgba(226,198,156,.9);transform:translateY(-3px)}
-.rail-counter{font:10px "JetBrains Mono";color:var(--dim);text-align:right;white-space:nowrap;display:flex;align-items:center;justify-content:flex-end;gap:6px}.rail-arrow{pointer-events:auto;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02);color:var(--dim);border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:14px}.rail-arrow:hover{color:var(--text);border-color:rgba(226,198,156,.45)}.rail-counter #counter{margin-left:8px}
-.rail-years{position:absolute;left:calc(3vw + 168px);right:calc(3vw + 88px);top:50px;height:20px;display:flex;justify-content:space-between;pointer-events:none}
+.rail-counter{position:absolute;right:0;top:0;z-index:3;font:10px "JetBrains Mono";color:var(--dim);text-align:right;white-space:nowrap;display:flex;align-items:center;justify-content:flex-end;gap:6px}.rail-arrow{pointer-events:auto;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02);color:var(--dim);border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:14px}.rail-arrow:hover{color:var(--text);border-color:rgba(226,198,156,.45)}.rail-counter #counter{margin-left:8px}
+.rail-years{position:absolute;left:0;right:0;top:50px;height:20px;display:flex;justify-content:space-between;pointer-events:none}
 .rail-year{font:10px "JetBrains Mono";color:var(--dim);letter-spacing:.08em;transform:translateX(-50%)}.rail-year.active{color:var(--text)}
 .rail-meta{display:none}
 @media(max-width:860px){
@@ -333,7 +333,6 @@ body.timeline-mode .nav-links a[data-view="timeline"]{color:var(--accent);opacit
     <div class="rail-counter"><button class="rail-arrow" id="railPrev" aria-label="Previous year">←</button><button class="rail-arrow" id="railNext" aria-label="Next year">→</button><span id="counter">01 / 15</span></div>
   </div>
   <div class="rail-years" id="railYears"></div>
-  <div class="rail-meta"><span>2008</span><span>← DRAG / SCROLL →</span><span>2026</span></div>
 </div>
 </div>
 </section>
